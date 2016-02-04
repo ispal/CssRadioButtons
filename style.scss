@@ -40,13 +40,13 @@ body {
     &--maa {
         background: #2D4659;
     }
-}
-
-.toggle-button {
-    margin: 0 20px;
+    &--taivas {
+        background: #009589;
+    }
 }
 
 @import 'common-button';
 @import 'effects/valo';
 @import 'effects/tuli';
 @import 'effects/maa';
+@import 'effects/taivas';
