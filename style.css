@@ -1,0 +1,598 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  margin: 0;
+  background: #3D5A59;
+  font-family: 'Raleway', Arial, sans-serif; }
+
+.section {
+  text-align: center;
+  height: 100%;
+  margin: 0 auto;
+  padding: 6em 0; }
+  .section__title {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 3em; }
+  .section--valo {
+    background: #2994B2; }
+  .section--tuli {
+    background: #095062; }
+  .section--maa {
+    background: #2D4659; }
+  .section--taivas {
+    background: #009589; }
+  .section--niitty {
+    background: #6DC995; }
+  .section--nummi {
+    background: #748B9C; }
+  .section--meri {
+    background: #5CA9FF; }
+
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  margin: 0 20px; }
+  .toggle-button label {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: left; }
+  .toggle-button input {
+    display: none; }
+  .toggle-button__icon {
+    cursor: pointer;
+    pointer-events: none; }
+    .toggle-button__icon:before, .toggle-button__icon:after {
+      content: "";
+      position: absolute;
+      transition: 0.2s ease-out; }
+
+@media only screen and (max-width: 480px) {
+  .toggle-button--valo {
+    display: block;
+    width: 110px;
+    margin: 0 auto 10px auto; } }
+
+.toggle-button--valo label {
+  width: 110px;
+  height: 20px;
+  line-height: 20px;
+  transition: all 0.2s; }
+  .toggle-button--valo label:before, .toggle-button--valo label:after {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 110px;
+    transition: all 0.2s .1s ease-out; }
+  .toggle-button--valo label:before {
+    content: attr(data-text); }
+
+.toggle-button--valo input:checked ~ .toggle-button__icon:after {
+  transform: translate(0, 0);
+  animation: show .2s; }
+
+.toggle-button--valo .toggle-button__icon {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  overflow: hidden;
+  border-radius: 50%; }
+  .toggle-button--valo .toggle-button__icon:before, .toggle-button--valo .toggle-button__icon:after {
+    border-radius: 50%; }
+  .toggle-button--valo .toggle-button__icon:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.15); }
+  .toggle-button--valo .toggle-button__icon:after {
+    top: 4px;
+    left: 4px;
+    width: 60%;
+    height: 60%;
+    background: #61B136;
+    animation: hide .2s ease-out;
+    transform: translate(0, 200%);
+    transition: none; }
+
+.toggle-button--valo:hover input:not(:checked) ~ .toggle-button__icon {
+  animation: hover .2s; }
+
+.toggle-button--valo:hover input:not(:checked) ~ label:before {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+@keyframes hide {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, -200%); } }
+
+@keyframes show {
+  0% {
+    transform: translate(0, 200%); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes hover {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+.toggle-button--tuli {
+  display: block;
+  width: 110px;
+  margin: 0 auto 10px auto; }
+  .toggle-button--tuli label {
+    width: 110px;
+    height: 20px;
+    line-height: 20px;
+    transition: all 0.2s; }
+    .toggle-button--tuli label:before, .toggle-button--tuli label:after {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 110px;
+      transition: all 0.2s .1s ease-out; }
+    .toggle-button--tuli label:before {
+      content: attr(data-text); }
+  .toggle-button--tuli input:checked ~ .toggle-button__icon:after {
+    transform: translate(0, 0);
+    animation: slideLeft .2s; }
+  .toggle-button--tuli .toggle-button__icon {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    border-radius: 50%; }
+    .toggle-button--tuli .toggle-button__icon:before, .toggle-button--tuli .toggle-button__icon:after {
+      border-radius: 50%; }
+    .toggle-button--tuli .toggle-button__icon:before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.15); }
+    .toggle-button--tuli .toggle-button__icon:after {
+      top: 4px;
+      left: 4px;
+      width: 60%;
+      height: 60%;
+      background: #61B136;
+      animation: slideRight .2s ease-out;
+      transform: translate(0, 200%);
+      transition: none; }
+  .toggle-button--tuli:hover input:not(:checked) ~ .toggle-button__icon {
+    animation: hover .2s; }
+  .toggle-button--tuli:hover input:not(:checked) ~ label:before {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+@keyframes slideRight {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-200%, 0); } }
+
+@keyframes slideLeft {
+  0% {
+    transform: translate(200%, 0); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes hover {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@media only screen and (max-width: 480px) {
+  .toggle-button--maa {
+    display: block;
+    width: 110px;
+    margin: 0 auto 10px auto; } }
+
+.toggle-button--maa label {
+  width: 110px;
+  height: 20px;
+  line-height: 20px;
+  transition: all 0.2s; }
+  .toggle-button--maa label:before, .toggle-button--maa label:after {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 110px;
+    transition: all 0.2s .1s ease-out; }
+  .toggle-button--maa label:before {
+    content: attr(data-text); }
+
+.toggle-button--maa input:checked ~ .toggle-button__icon:before {
+  animation: wave .7s ease-out; }
+
+.toggle-button--maa input:checked ~ .toggle-button__icon:after {
+  transform: scale(1);
+  animation: zoomIn .2s; }
+
+.toggle-button--maa .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.15); }
+  .toggle-button--maa .toggle-button__icon:before, .toggle-button--maa .toggle-button__icon:after {
+    border-radius: 50%; }
+  .toggle-button--maa .toggle-button__icon:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); }
+  .toggle-button--maa .toggle-button__icon:after {
+    top: 4px;
+    left: 4px;
+    width: 60%;
+    height: 60%;
+    background: #61B136;
+    animation: zoomOut .2s ease-out;
+    transform: scale(0);
+    transition: none; }
+
+.toggle-button--maa:hover input:not(:checked) ~ .toggle-button__icon {
+  animation: hover .2s; }
+
+.toggle-button--maa:hover input:not(:checked) ~ label:before {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(0); } }
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0); }
+  90% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes hover {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes wave {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  40% {
+    opacity: 0.2; }
+  100% {
+    opacity: 0;
+    transform: scale(1.5); } }
+
+@media only screen and (max-width: 480px) {
+  .toggle-button--taivas {
+    display: block;
+    width: 110px;
+    margin: 0 auto 10px auto; } }
+
+.toggle-button--taivas label {
+  width: 110px;
+  height: 20px;
+  line-height: 20px;
+  transition: all 0.2s; }
+  .toggle-button--taivas label:before, .toggle-button--taivas label:after {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 110px;
+    transition: all 0.2s .1s ease-out; }
+  .toggle-button--taivas label:before {
+    content: attr(data-text); }
+
+.toggle-button--taivas input:checked ~ .toggle-button__icon:before {
+  animation: wave .7s ease-out; }
+
+.toggle-button--taivas input:checked ~ .toggle-button__icon:after {
+  opacity: 1;
+  animation: zoomFadeIn .4s; }
+
+.toggle-button--taivas .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: visible;
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.15); }
+  .toggle-button--taivas .toggle-button__icon:before, .toggle-button--taivas .toggle-button__icon:after {
+    border-radius: 50%; }
+  .toggle-button--taivas .toggle-button__icon:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); }
+  .toggle-button--taivas .toggle-button__icon:after {
+    top: 4px;
+    left: 4px;
+    width: 60%;
+    height: 60%;
+    background: #61B136;
+    animation: zoomFadeOut .2s ease-out;
+    opacity: 0;
+    transition: none; }
+
+.toggle-button--taivas:hover input:not(:checked) ~ .toggle-button__icon {
+  animation: hover .2s; }
+
+.toggle-button--taivas:hover input:not(:checked) ~ label:before {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+@keyframes zoomFadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes zoomFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(3); }
+  90% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes hover {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes wave {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  40% {
+    opacity: 0.2; }
+  100% {
+    opacity: 0;
+    transform: scale(1.5); } }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--niitty label {
+  line-height: 20px; }
+
+.toggle-button--niitty input[type=radio]:checked ~ .toggle-button__icon {
+  background: #fff; }
+  .toggle-button--niitty input[type=radio]:checked ~ .toggle-button__icon:before, .toggle-button--niitty input[type=radio]:checked ~ .toggle-button__icon:after {
+    opacity: 1; }
+
+.toggle-button--niitty .toggle-button__icon {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s;
+  margin-right: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+  .toggle-button--niitty .toggle-button__icon:before, .toggle-button--niitty .toggle-button__icon:after {
+    top: 5px;
+    left: 2px;
+    width: 12px;
+    height: 2px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    top: 35%;
+    background: #61B136;
+    opacity: 0;
+    transform-origin: left center; }
+  .toggle-button--niitty .toggle-button__icon:before {
+    transform: translate(0, 0) rotate(45deg) scale(0.6, 1); }
+  .toggle-button--niitty .toggle-button__icon:after {
+    transform: translate(4px, 6px) rotate(-45deg); }
+
+.toggle-button--niitty:hover input[type=radio]:not(:checked) ~ .toggle-button__icon {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+
+@media only screen and (max-width: 480px) {
+  .toggle-button--nummi {
+    display: block;
+    width: 110px;
+    margin: 0 auto 10px auto; } }
+
+.toggle-button--nummi label {
+  width: 110px;
+  height: 20px;
+  line-height: 20px;
+  transition: all 0.2s; }
+  .toggle-button--nummi label:before, .toggle-button--nummi label:after {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 110px;
+    transition: all 0.2s .1s ease-out; }
+  .toggle-button--nummi label:before {
+    content: attr(data-text); }
+
+.toggle-button--nummi input:checked ~ .toggle-button__icon {
+  animation: wiggle .2s ease-out; }
+  .toggle-button--nummi input:checked ~ .toggle-button__icon:after {
+    animation: flyInRight .4s;
+    transform: translate(0); }
+
+.toggle-button--nummi .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.15); }
+  .toggle-button--nummi .toggle-button__icon:before, .toggle-button--nummi .toggle-button__icon:after {
+    border-radius: 50%; }
+  .toggle-button--nummi .toggle-button__icon:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); }
+  .toggle-button--nummi .toggle-button__icon:after {
+    top: 4px;
+    left: 4px;
+    width: 60%;
+    height: 60%;
+    background: #61B136;
+    transition: none;
+    transform: translate(200%);
+    animation: flyOutLeft .4s; }
+
+.toggle-button--nummi:hover input:not(:checked) ~ .toggle-button__icon {
+  animation: hover .2s; }
+
+.toggle-button--nummi:hover input:not(:checked) ~ label:before {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+@keyframes flyInRight {
+  0% {
+    transform: translate(200%); }
+  50% {
+    transform: translate(200%); }
+  70% {
+    transform: translate(-50%); }
+  100% {
+    transform: translate(0); } }
+
+@keyframes flyOutLeft {
+  0% {
+    transform: translate(0); }
+  70% {
+    transform: translate(0); }
+  100% {
+    transform: translate(-200%); } }
+
+@keyframes wiggle {
+  0% {
+    transform: translate(0); }
+  80% {
+    transform: translate(5px); }
+  100% {
+    transform: translate(0); } }
+
+@keyframes hover {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@media only screen and (max-width: 480px) {
+  .toggle-button--meri {
+    display: block;
+    width: 110px;
+    margin: 0 auto 10px auto; } }
+
+.toggle-button--meri label {
+  width: 110px;
+  height: 20px;
+  line-height: 20px;
+  transition: all 0.2s; }
+  .toggle-button--meri label:before, .toggle-button--meri label:after {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 110px;
+    transition: all 0.2s .1s ease-out; }
+  .toggle-button--meri label:before {
+    content: attr(data-text); }
+
+.toggle-button--meri input:checked ~ .toggle-button__icon:before {
+  transition-delay: 0;
+  transform: rotateY(0deg); }
+
+.toggle-button--meri input:checked ~ .toggle-button__icon:after {
+  transition-delay: .2s;
+  transform: rotateY(0deg); }
+
+.toggle-button--meri .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.15);
+  perspective: 800;
+  transform-style: preserve-3d; }
+  .toggle-button--meri .toggle-button__icon:before, .toggle-button--meri .toggle-button__icon:after {
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    background: #61B136; }
+  .toggle-button--meri .toggle-button__icon:before {
+    left: 4px;
+    border-radius: 12px 0 0 12px;
+    transform: rotateY(90deg);
+    transform-origin: right center; }
+  .toggle-button--meri .toggle-button__icon:after {
+    right: 4px;
+    border-radius: 0 12px 12px 0;
+    transform: rotateY(90deg);
+    transform-origin: left center;
+    transition-delay: .2s; }
+
+.toggle-button--meri:hover input:not(:checked) ~ .toggle-button__icon {
+  animation: hover .2s; }
