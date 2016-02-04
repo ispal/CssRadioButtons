@@ -1,0 +1,90 @@
+.toggle-button--meri {
+
+    $border-radius:     50%;
+    $icon-bg:           #fff;
+    $height:            20px;
+    $label-width:       110px;
+    $background-on:     #61B136;
+
+    @media only screen and (max-width : 480px) {
+        display: block;
+        width: $label-width;
+        margin: 0 auto 10px auto;
+    }
+
+    label {
+        width: $label-width;
+        height: $height;
+        line-height: $height;
+        transition: all 0.2s;
+        
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            left: $height + 10px;
+            width: $label-width;
+            transition: all 0.2s .1s ease-out;
+        }
+
+        &:before {
+            content:attr(data-text);
+        }
+    }
+    
+    input:checked ~ .toggle-button__icon {
+        &:before {
+            transition-delay: 0;
+            transform: rotateY(0deg);
+        }
+        &:after {
+            transition-delay: .2s;
+            transform: rotateY(0deg);
+        }
+    }
+
+    .toggle-button__icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: $height;
+        width: $height;
+        border-radius: $border-radius;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: inset 1px 1px 10px rgba(0,0,0,0.15);
+        perspective: 800;
+        transform-style: preserve-3d;
+
+        &:before,
+        &:after {
+            top: 4px;
+            width: 6px;
+            height: 12px;
+            background: $background-on;
+        }
+
+        &:before {
+            left: 4px;
+            border-radius: 12px 0 0 12px;
+            transform: rotateY(90deg);
+            transform-origin: right center;
+        }
+        &:after  {
+            right: 4px;
+            border-radius: 0 12px 12px 0;
+            transform: rotateY(90deg);
+            transform-origin: left center;
+            transition-delay: .2s;
+        }
+        
+    }
+
+    &:hover {
+        
+        input:not(:checked) ~ .toggle-button__icon{
+            animation: hover .2s;
+        }
+    }
+
+}

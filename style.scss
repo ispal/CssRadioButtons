@@ -43,6 +43,15 @@ body {
     &--taivas {
         background: #009589;
     }
+    &--niitty {
+        background: #6DC995;
+    }
+    &--nummi {
+        background: #748B9C;
+    }
+    &--meri {
+        background: #5CA9FF;
+    }
 }
 
 @import 'common-button';
@@ -50,3 +59,6 @@ body {
 @import 'effects/tuli';
 @import 'effects/maa';
 @import 'effects/taivas';
+@import 'effects/niitty';
+@import 'effects/nummi';
+@import 'effects/meri';
